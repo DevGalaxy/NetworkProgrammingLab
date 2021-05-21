@@ -6,8 +6,8 @@ from functools import partial
 
 wind = tk.Tk()
 wind.geometry('300x400')
-playerNumber = 0
-message_button = tk.Button(wind, text="Server: X" + str(playerNumber+1), width=15,disabledforeground="black")
+
+message_button = tk.Button(wind, text="Server: X", width=15,disabledforeground="black")
 message_button.grid(row=0)
 message_button["state"] = 'disable'
 counter = 0
@@ -70,7 +70,7 @@ def check(btn1, btn2, btn3):
     else:
         return False
 def checkEndGame():
-    global playerNumber
+   
     global button
     global counter
     if(check(btns["btn_1"], btns["btn_2"], btns["btn_3"]) or check(btns["btn_4"], btns["btn_5"], btns["btn_6"]) or\
